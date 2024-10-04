@@ -2,10 +2,15 @@ package francescaBattistini;
 
 import francescaBattistini.Entities.*;
 
+import java.util.List;
+
 public class Application {
 
     public static void main(String[] args) {
+
+
         Collezione collezione = new Collezione();
+
         VideoGiochi game1 = new VideoGiochi(12345, "the Witcher-wild hunt", 2015, 30.00, "Play", 60, Genere.AVVENTURA);
         GiochiDaTavolo gtavola1 = new GiochiDaTavolo(23455, "Risico", 1995, 16.25, 4, 60);
         VideoGiochi game2 = new VideoGiochi(78906, "Zelda", 1998, 40.25, "gameboy", 40, Genere.AVVENTURA);
@@ -24,12 +29,13 @@ public class Application {
         System.out.println("Il gioco che cercavi è : " + ricercaPerId.getTitolo());
 
         //esercizio3
-        System.out.println(collezione.ricercaPerPrezzo(16));
+     collezione.ricercaPerPrezzo(16);
 
         //4.
-        System.out.println(collezione.searchforgamers(4));
+        collezione.searchforgamers(4);
 
         //5.
-        System.out.println(collezione.rimoviElemendoDaId(12345));
+        collezione.rimoviElemendoDaId(12345);
+
     }
 }

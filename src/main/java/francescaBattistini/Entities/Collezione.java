@@ -6,8 +6,15 @@ import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 public class Collezione {
+
  private List<Gioco> giochi;
 
+    @Override
+    public String toString() {
+        return "Collezione{" +
+                "giochi=" + giochi +
+                '}';
+    }
 
 public Collezione(){
     giochi = new ArrayList<>();
@@ -66,7 +73,10 @@ public Collezione(){
             return List.of();
         }
 }
-//5.
+
+
+
+    //5. rimovi un elemento selezionando un id
 public boolean rimoviElemendoDaId(int idGioco) {
     try {
         Gioco giocoDaRimuovere = giochi.stream()
@@ -82,12 +92,13 @@ public boolean rimoviElemendoDaId(int idGioco) {
         System.out.println("Errore: " + e.getMessage());
     }
     return false;
+
+
+
+
+
 }
 
-
-
-
-
-    }
+}
 
 
